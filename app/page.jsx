@@ -6,7 +6,7 @@ import { FiDownload } from "react-icons/fi";
 import Stats from '@/components/Stats';
 const Home = () => {
   return (
-    <section className='h-full'>
+    <section className='h-full mb-24'>
       <div className="container mx-auto h-full">
         <div className='flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24'>
           {/* text */}
