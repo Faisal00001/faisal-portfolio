@@ -7,10 +7,13 @@ import { SiDjango, SiTailwindcss, SiNextdotjs, SiMongodb } from "react-icons/si"
 import { BsFiletypeSql } from "react-icons/bs";
 
 import { GiArtificialIntelligence } from "react-icons/gi";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
+
+
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/src/components/ui/tooltip";
+import { ScrollArea } from "@/src/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/components/ui/tabs";
+
 
 // About data
 const about =

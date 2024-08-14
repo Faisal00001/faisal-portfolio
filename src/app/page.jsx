@@ -1,10 +1,21 @@
-import Socials from '@/components/Socials';
-import Photo from '@/components/Photo';
-import { Button } from '@/components/ui/button';
+"use client"
+import Socials from '../components/Socials';
+// import Socials from '@/components/Socials';
+import Photo from '../components/Photo';
+import { Button } from '../components/ui/button';
 import React from 'react';
 import { FiDownload } from "react-icons/fi";
-import Stats from '@/components/Stats';
+import Stats from '../components/Stats';
+
 const Home = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Faisal_Osman_CV.pdf'; // Path to your CV file
+    link.download = 'Faisal_Osman_CV.pdf'; // The name of the file to be downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   return (
     <section className='h-full mb-24'>
       <div className="container mx-auto h-full">
@@ -16,10 +27,12 @@ const Home = () => {
             <p className='max-w-[500px] mb-9 text-white/80'>I excel at crafting elegant digital experiences, leveraging AI, programming languages and modern web technologies. My expertise ensures the creation of dynamic, intelligent, and responsive web applications.</p>
             {/* btn and socials */}
             <div className='flex flex-col xl:flex-row gap-8 items-center'>
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Download CV</span>
-                <FiDownload className='text-xl'></FiDownload>
-              </Button>
+              <div onClick={handleDownload}>
+                <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                  <span>Download CV</span>
+                  <FiDownload className='text-xl'></FiDownload>
+                </Button>
+              </div>
               <div className='mb-8 xl:mb-0'>
                 <Socials containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"></Socials>
               </div>
