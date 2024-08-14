@@ -14,8 +14,9 @@ export async function POST(request) {
         });
 
         const mailOptions = {
-            from: email,
-            to: 'faisalosmannorthsouth798@gmail.com',
+            from: process.env.EMAIL_USER, // The authenticated user's email
+            replyTo: email, // The user's email address
+            to: process.env.EMAIL_USER,
             subject: `New message from ${firstname} ${lastname}`,
             text: `Service: ${service}\nPhone: ${phone}\nMessage: ${message}`,
             html: `
